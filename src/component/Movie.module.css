@@ -1,0 +1,51 @@
+
+.bgImg{
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bannerContainer{
+    padding: 30px 90px 0 90px;
+    line-height: 1.25em;
+}
+
+.movieTitle{
+    margin-top: 25px;
+}
+
+.movieRating{
+    border: 2px solid grey;
+    border-radius: 5px;
+    padding: 0 5px;
+}
+
+.moviePoster{
+    border-radius: 8px;
+}
+
+.progressbar{
+    height:78px;
+    width:78px;
+}
+
+.iconborder{
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+
+
+}
+
+.iconborder i{
+    margin: auto;
+}
+
+.Fullcastcrew{
+   text-decoration: none;
+   color: black;
+}
+
+.Fullcastcrew:hover{
+    text-decoration: none;
+    color: grey;
+ }

@@ -1,0 +1,32 @@
+
+
+.profileImg img{
+    width: 64px;
+    position: absolute;
+    clip: rect(10px,60px,74px,0px);
+}
+
+.profileName p{
+    position: relative;
+    left: 60px;
+    top: 20px;
+    line-height: 0.8em;
+    font-size: 14px;
+
+}
+
+.backtomain{
+    text-decoration: none;
+    color: black;
+ }
+ 
+ .backtomain:hover{
+     text-decoration: none;
+     color: grey;
+  }
+
+.ccbanner{
+    background-color: rgba(241.5, 199.5, 10.5, 1);
+
+    
+}

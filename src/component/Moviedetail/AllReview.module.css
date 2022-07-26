@@ -1,0 +1,32 @@
+.backtomain{
+    text-decoration: none;
+    color: black;
+ }
+ 
+ .backtomain:hover{
+     text-decoration: none;
+     color: grey;
+  }
+
+.ccbanner{
+    background-color: rgba(241.5, 199.5, 10.5, 1);
+
+    
+}
+
+.reviewsImg{
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+}
+
+.reviewsDate{
+    line-height: 0.8em;
+    font-size: 14px;
+    color: gray;
+}
+
+.reviewsContent{
+    line-height: 1.25em;
+    
+}
