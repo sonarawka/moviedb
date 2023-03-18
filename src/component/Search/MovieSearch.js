@@ -37,6 +37,7 @@ const MovieSearch = () => {
         loadmovieApi()
         loadtvApi()
         loadpeopleApi()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
 

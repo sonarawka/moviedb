@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="d-flex">
         <div className="p-2 d-flex justify-content-end " style={{flex:"2"}}>
           <div className='d-flex flex-column '>
-          <img width="150px" src='https://pbs.twimg.com/profile_images/1243623122089041920/gVZIvphd_400x400.jpg'/>
+          <img width="150px" src='https://pbs.twimg.com/profile_images/1243623122089041920/gVZIvphd_400x400.jpg' alt=''/>
           <button style={{color:"rgb(30,213,169)", borderRadius:"10px", padding:"10px 20px"}}><b>JOIN THE COMMUNITY</b></button>
           </div>
         </div>

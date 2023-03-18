@@ -48,9 +48,9 @@ const PeopleSubNavbar = (props) => {
                         Share
                     </button>
                     <ul className="dropdown-menu">
-                        <li><a className="dropdown-item active" href="#" data-bs-toggle="modal" data-bs-target="#shareLink">Share Link</a></li>
-                        <li><a className="dropdown-item" href={`https://www.facebook.com/sharer/sharer.php?u=https://themoviedb.com/person/${id}`} target="_blank">Facebook</a></li>
-                        <li><a className="dropdown-item" href={`https://twitter.com/intent/tweet?url=https://themoviedb.com/person/${id}&text=The%20Boys%20@themoviedb&related=themoviedb`} target="_blank">Tweet</a></li>
+                        <li><a className="dropdown-item active" href="/" data-bs-toggle="modal" data-bs-target="#shareLink">Share Link</a></li>
+                        <li><a className="dropdown-item" rel="noreferrer" href={`https://www.facebook.com/sharer/sharer.php?u=https://themoviedb.com/person/${id}`} target="_blank">Facebook</a></li>
+                        <li><a className="dropdown-item" rel="noreferrer" href={`https://twitter.com/intent/tweet?url=https://themoviedb.com/person/${id}&text=The%20Boys%20@themoviedb&related=themoviedb`} target="_blank">Tweet</a></li>
                     </ul>
                 </div>
             </div>

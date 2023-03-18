@@ -17,6 +17,7 @@ const People = () => {
 
     useEffect(() => {
         loadApi()
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       }, [])
 
      
@@ -27,7 +28,7 @@ const People = () => {
         <div className='container'>
             <div className='row'>
             <div className='col-md-3'>
-                <img style={{borderRadius:"10px"}} width="100%" src={`https://image.tmdb.org/t/p/w342${result.profile_path}`}/>
+                <img style={{borderRadius:"10px"}} width="100%" src={`https://image.tmdb.org/t/p/w342${result.profile_path}`} alt=""/>
             </div>
             <div className='col-md-9'>
                 <h4 className='mb-4'><b>{result.name}</b></h4>

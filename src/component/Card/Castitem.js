@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import classes from './Castitem.module.css'
 
 const Castitem = (props) => {
-    const { id, original_name, profile_path, character} = props;
+    const { original_name, profile_path, character} = props;
     const imageUrl = `https://image.tmdb.org/t/p/w500${profile_path}`
     return (
         <div>

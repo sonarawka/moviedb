@@ -17,6 +17,7 @@ const TvTab = (props) => {
 
     useEffect(() => {
         loadApi()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return (
@@ -40,7 +41,7 @@ const TvTab = (props) => {
                     <div className='card'>
                         <div className='row mt-4'>
                             <div className={`col-md-1`}>
-                                <img className={`${classes.reviewsImg} mx-3`} src={`https://image.tmdb.org/t/p/w300${result.results[0].author_details.avatar_path}`}/>
+                                <img className={`${classes.reviewsImg} mx-3`} src={`https://image.tmdb.org/t/p/w300${result.results[0].author_details.avatar_path}`} alt=""/>
                                 </div>
                             <div className='col-md-11 ps-4'>
                                 <h5 className={classes.reviewsAuthor}><b>A review by {result.results[0].author_details.name} 6.0</b></h5>

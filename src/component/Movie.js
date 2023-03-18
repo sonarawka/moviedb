@@ -60,6 +60,7 @@ const Movie = (props) => {
     getCastCrew()
     getRecommendation()
     getSocialApi()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
 
@@ -72,7 +73,7 @@ const Movie = (props) => {
           <div className={classes.bgImg} style={{ backgroundImage: `linear-gradient(#333333cc, #333333ee), url('https://image.tmdb.org/t/p/w1280${result.backdrop_path}')` }}>
             <div className={`row ${classes.bannerContainer}`}>
               <div className='col-md-3'>
-                <img className={classes.moviePoster} src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2${result.poster_path}`} />
+                <img className={classes.moviePoster} src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2${result.poster_path}`} alt=""/>
 
               </div>
               <div className='col-md-9 text-white py-5'>
@@ -130,25 +131,25 @@ const Movie = (props) => {
                   {" "}
                   <a
                     href={`https://www.imdb.com/title/${social.imdb_id}`}
-                    target="_blank"
+                    target="_blank" rel="noreferrer"
                   >
                     <i className="iconhover fa-brands fa-imdb mx-1"></i>
                   </a>{" "}
                   <a
                     href={`https://www.facebook.com/${social.facebook_id}`}
-                    target="_blank"
+                    target="_blank" rel="noreferrer"
                   >
                     <i className="iconhover fa-brands fa-facebook mx-1"></i>
                   </a>{" "}
                   <a
                     href={`https://www.instagram.com/${social.instagram_id}`}
-                    target="_blank"
+                    target="_blank" rel="noreferrer"
                   >
                     <i className="iconhover fa-brands fa-instagram mx-1"></i>
                   </a>{" "}
                   <a
                     href={`https://twitter.com/${social.twitter_id}`}
-                    target="_blank"
+                    target="_blank" rel="noreferrer"
                   >
                     <i className="iconhover fa-brands fa-twitter mx-1"></i>
                   </a>{" "}

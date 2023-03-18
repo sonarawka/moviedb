@@ -23,6 +23,7 @@ const KnownforContainer = (props) => {
         loadTvApi()
       })
       
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       }, [])
       console.log(result)
       

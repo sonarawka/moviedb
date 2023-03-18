@@ -13,6 +13,7 @@ const Searchbar = () => {
     useEffect(() => {
         location.pathname===`/search/${query}`?console.log(""):setquery("")
       
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [location.pathname])
     
     

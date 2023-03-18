@@ -14,6 +14,7 @@ const TvCardContainer = (props) => {
 
     useEffect(() => {
         loadpopular()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     
    

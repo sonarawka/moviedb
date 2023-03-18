@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const TvRecommendationitem = (props) => {
-    const { id, original_name, profile_path} = props;
+    const { original_name, profile_path} = props;
     const imageUrl = `https://image.tmdb.org/t/p/w500${profile_path}`
     return (
         <div>

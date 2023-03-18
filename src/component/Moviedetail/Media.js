@@ -25,6 +25,7 @@ const Media = (props) => {
     useEffect(() => {
         videoApi()
         imageApi()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
 
@@ -53,30 +54,30 @@ const Media = (props) => {
 
                 <div className="tab-pane fade" id="popular-tab-pane" role="tabpanel" aria-labelledby="popular-tab" tabIndex="0">
                     <div className='row'>
-                    {videoResult.results[0] && <div className='col-md-6'><img src={`https://img.youtube.com/vi/${videoResult.results[0].key}/hqdefault.jpg`} /></div>}
+                    {videoResult.results[0] && <div className='col-md-6'><img src={`https://img.youtube.com/vi/${videoResult.results[0].key}/hqdefault.jpg`} alt=""/></div>}
 
 
-{backdropResult[0] && <div className='col-md-6'><img src={`https://image.tmdb.org/t/p/w500${backdropResult[0].file_path}`} /></div>}
+{backdropResult[0] && <div className='col-md-6'><img src={`https://image.tmdb.org/t/p/w500${backdropResult[0].file_path}`} alt=""/></div>}
                     </div>
                 </div>
                 <div className="tab-pane fade row" id="backdrops-tab-pane" role="tabpanel" aria-labelledby="backdrops-tab" tabIndex="0">
                     <div className='row'>
-                    {backdropResult[0] && <div className='col-md-6'><img src={`https://image.tmdb.org/t/p/w500${backdropResult[0].file_path}`} /></div>}
+                    {backdropResult[0] && <div className='col-md-6'><img src={`https://image.tmdb.org/t/p/w500${backdropResult[0].file_path}`} alt=""/></div>}
 
-{backdropResult[1] && <div className='col-md-6'><img src={`https://image.tmdb.org/t/p/w500${backdropResult[1].file_path}`} /></div>}
+{backdropResult[1] && <div className='col-md-6'><img src={`https://image.tmdb.org/t/p/w500${backdropResult[1].file_path}`} alt=""/></div>}
                     </div>
                 </div>
                 <div className="tab-pane fade" id="posters-tab-pane" role="tabpanel" aria-labelledby="posters-tab" tabIndex="0">
                     <div className='row'>
                     {posterResult.slice(0,3).map((e)=>{return(
-                        <div className='col-md-3'><img width="100%" src={`https://image.tmdb.org/t/p/w185${e.file_path}`} /></div>
+                        <div className='col-md-3'><img width="100%" src={`https://image.tmdb.org/t/p/w185${e.file_path}`} alt=""/></div>
                     )})}
                     </div>
                 </div>
                 <div className="tab-pane fade" id="videos-tab-pane" role="tabpanel" aria-labelledby="videos-tab" tabIndex="0">
                     <div className='row'>
-                    {videoResult.results[0] && <div className='col-md-6'><img src={`https://img.youtube.com/vi/${videoResult.results[0].key}/hqdefault.jpg`} /></div>}
-                        {videoResult.results[1] && <div className='col-md-6'><img src={`https://img.youtube.com/vi/${videoResult.results[1].key}/hqdefault.jpg`} /></div>} 
+                    {videoResult.results[0] && <div className='col-md-6'><img src={`https://img.youtube.com/vi/${videoResult.results[0].key}/hqdefault.jpg`} alt=""/></div>}
+                        {videoResult.results[1] && <div className='col-md-6'><img src={`https://img.youtube.com/vi/${videoResult.results[1].key}/hqdefault.jpg`} alt=""/></div>} 
                     </div>
                 </div>
             </div>}

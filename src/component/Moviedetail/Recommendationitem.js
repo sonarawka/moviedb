@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import classes from './Recommendationitem.module.css'
+// import classes from './Recommendationitem.module.css'
 
 const Recommendationitem = (props) => {
-    const { id, original_name, profile_path} = props;
+    const { original_name, profile_path} = props;
     const imageUrl = `https://image.tmdb.org/t/p/w500${profile_path}`
     return (
         <div>

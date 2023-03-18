@@ -44,7 +44,7 @@ const LatestTrailer = () => {
                 <div key={e.id} className='col-md-3'>
                 <div className={classes.ImgContainer} data-bs-toggle="modal" data-bs-target={`#modal${e.id}`}>
                 <i className={`fa-solid fa-play text-white ${classes.playBtn}`}></i>
-                <img className={classes.ImgWidth} width="300px" style={{borderRadius:"12px"}} name={`https://image.tmdb.org/t/p/w1920_and_h600_multi_faces${e.backdrop_path}`} src={`https://image.tmdb.org/t/p/w500${e.backdrop_path}`} onMouseOver={hoverhandler}/>
+                <img className={classes.ImgWidth} width="300px" style={{borderRadius:"12px"}} name={`https://image.tmdb.org/t/p/w1920_and_h600_multi_faces${e.backdrop_path}`} src={`https://image.tmdb.org/t/p/w500${e.backdrop_path}`} onMouseOver={hoverhandler} alt=""/>
                 </div>
                 <h5 style={{textAlign:"center"}} className='text-white mt-2'>{e.original_name}</h5>
                 <LatestTrailerModel id={e.id}/>

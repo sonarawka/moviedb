@@ -4,7 +4,7 @@ import SubNavbar from '../SubNavbar'
 import TvCrew from './TvCrew'
 import classes from './TvFullcastcrew.module.css'
 
-const TvFullcastcrew = (props) => {
+const TvFullcastcrew = () => {
     const param = useParams()
     const location = useLocation()
 
@@ -25,6 +25,7 @@ const TvFullcastcrew = (props) => {
 
     useEffect(() => {
         getCastCrew()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
 
@@ -35,7 +36,7 @@ const TvFullcastcrew = (props) => {
                 <div  className='container'>
                     <div className={`row mb-3`}>
                         <div className='col-md-1'>
-                            <img width='64px' src={imgurl ? `https://image.tmdb.org/t/p/w185${imgurl}` : `https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-4-user-grey-d8fe957375e70239d6abdd549fd7568c89281b2179b5f4470e2e12895792dfa5.svg`} />
+                            <img width='64px' src={imgurl ? `https://image.tmdb.org/t/p/w185${imgurl}` : `https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-4-user-grey-d8fe957375e70239d6abdd549fd7568c89281b2179b5f4470e2e12895792dfa5.svg`} alt=""/>
                         </div>
                         <div className='col-md-11'>
                             <h2><b>{title}</b> ({release_date})</h2>
@@ -52,7 +53,7 @@ const TvFullcastcrew = (props) => {
 
                         {cast && cast.map((cast) => {
                             return (<div key={cast.credit_id} className="d-flex flex-row mb-2">
-                                <div className={`p-2 ${classes.profileImg}`}><img src={cast.profile_path ? `https://image.tmdb.org/t/p/w185${cast.profile_path}` : `https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-4-user-grey-d8fe957375e70239d6abdd549fd7568c89281b2179b5f4470e2e12895792dfa5.svg`} /></div>
+                                <div className={`p-2 ${classes.profileImg}`}><img src={cast.profile_path ? `https://image.tmdb.org/t/p/w185${cast.profile_path}` : `https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-4-user-grey-d8fe957375e70239d6abdd549fd7568c89281b2179b5f4470e2e12895792dfa5.svg`} alt=""/></div>
                                 <div className={`p-2 ${classes.profileName}`}>
                                     <p><b>{cast.original_name}</b></p>
                                     <p>{cast.character}</p>

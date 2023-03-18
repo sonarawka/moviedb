@@ -15,6 +15,7 @@ const LatestTrailerModel = (props) => {
 
     useEffect(() => {
       videoApi()
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       }, [])
 
      
@@ -29,7 +30,7 @@ const LatestTrailerModel = (props) => {
             </div>
             <div className="modal-body">
               
-           {videoResult && <iframe width="1080" height="600" src={`https://www.youtube.com/embed/${videoResult.results[1].key}`}>
+           {videoResult && <iframe title='myFrame' width="1080" height="600" src={`https://www.youtube.com/embed/${videoResult.results[1].key}`}>
            </iframe>}
             
             </div>

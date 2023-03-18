@@ -4,8 +4,6 @@ import classes from './Movie.module.css'
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import CastContainer from './Card/CastContainer';
 import TvTab from './Tvdetails/TvTab';
-import Media from './Moviedetail/Media';
-import Recommendationcontainer from './Moviedetail/Recommendationcontainer';
 import TvMedia from './Tvdetails/TvMedia';
 import TvRecommendationcontainer from './Tvdetails/TvRecommendationcontainer';
 import SubNavbar from './SubNavbar';
@@ -65,6 +63,7 @@ const Tv = () => {
     getRecommendation()
     getSocialApi()
     getKeyword()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
 
@@ -79,7 +78,7 @@ const Tv = () => {
           <div className={classes.bgImg} style={{ backgroundImage: `linear-gradient(#333333cc, #333333ee), url('https://image.tmdb.org/t/p/w1280${result.backdrop_path}')` }}>
             <div className={`row ${classes.bannerContainer}`}>
               <div className='col-md-3'>
-                <img className={classes.moviePoster} src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2${result.poster_path}`} />
+                <img className={classes.moviePoster} src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2${result.poster_path}`} alt=""/>
 
               </div>
               <div className='col-md-9 text-white py-5'>

@@ -20,6 +20,7 @@ const Images = () => {
 
     useEffect(() => {
         imageApi()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     return (
         <div>
@@ -28,7 +29,7 @@ const Images = () => {
                 <div className='container'>
                     <div className={`row mb-2`}>
                         <div className='col-md-1'>
-                            <img width='64px' src={imgurl ? `https://image.tmdb.org/t/p/w185${imgurl}` : `https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-4-user-grey-d8fe957375e70239d6abdd549fd7568c89281b2179b5f4470e2e12895792dfa5.svg`} />
+                            <img width='64px' src={imgurl ? `https://image.tmdb.org/t/p/w185${imgurl}` : `https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-4-user-grey-d8fe957375e70239d6abdd549fd7568c89281b2179b5f4470e2e12895792dfa5.svg`} alt=""/>
                         </div>
                         <div className='col-md-11'>
                             <h2><b>{title}</b> ({release_date})</h2>

@@ -19,6 +19,7 @@ const AllReview = () => {
 
     useEffect(() => {
         loadApi()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
 
@@ -30,7 +31,7 @@ const AllReview = () => {
                 <div className='container'>
                     <div className={`row mb-5`}>
                         <div className='col-md-1'>
-                            <img width='64px' src={imgurl ? `https://image.tmdb.org/t/p/w185${imgurl}` : `https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-4-user-grey-d8fe957375e70239d6abdd549fd7568c89281b2179b5f4470e2e12895792dfa5.svg`} />
+                            <img width='64px' src={imgurl ? `https://image.tmdb.org/t/p/w185${imgurl}` : `https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-4-user-grey-d8fe957375e70239d6abdd549fd7568c89281b2179b5f4470e2e12895792dfa5.svg`} alt="" />
                         </div>
                         <div className='col-md-11'>
                             <h2><b>{title}</b> ({release_date})</h2>
@@ -48,7 +49,7 @@ const AllReview = () => {
                                 <div className='card mb-5'>
                                     <div className='row mt-4'>
                                         <div className={`col-md-1`}>
-                                            <img className={`${classes.reviewsImg} mx-3`} src={`https://image.tmdb.org/t/p/w300${e.author_details.avatar_path}`} />
+                                            <img className={`${classes.reviewsImg} mx-3`} src={`https://image.tmdb.org/t/p/w300${e.author_details.avatar_path}`} alt="" />
                                         </div>
                                         <div className='col-md-11 ps-4'>
                                             <h5 className={classes.reviewsAuthor}><b>A review by {e.author_details.name} 6.0</b></h5>

@@ -14,6 +14,7 @@ const CardContainer = (props) => {
 
     useEffect(() => {
         loadpopular()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     
    

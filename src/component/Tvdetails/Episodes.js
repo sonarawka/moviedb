@@ -6,7 +6,7 @@ import classes from './TvAllReview.module.css'
 const Episodes = () => {
   const param = useParams()
   const location = useLocation()
-  const { imgurl, title, release_date, type, season_no } = location.state
+  const { imgurl, title, release_date, season_no } = location.state
   const [result, setresult] = useState(null)
   const url = `https://api.themoviedb.org/3/tv/${param.id}/season/${season_no}?api_key=184d4ae5b2d8ff18eca3972237dc1b9f&language=en-US`
 
@@ -19,6 +19,7 @@ const Episodes = () => {
   console.log(url)
   useEffect(() => {
     loadApi()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
@@ -28,7 +29,7 @@ const Episodes = () => {
         <div className='container'>
           <div className={`row mb-2`}>
             <div className='col-md-1'>
-              <img width='64px' src={imgurl ? `https://image.tmdb.org/t/p/w185${imgurl}` : `https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-4-user-grey-d8fe957375e70239d6abdd549fd7568c89281b2179b5f4470e2e12895792dfa5.svg`} />
+              <img width='64px' src={imgurl ? `https://image.tmdb.org/t/p/w185${imgurl}` : `https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-4-user-grey-d8fe957375e70239d6abdd549fd7568c89281b2179b5f4470e2e12895792dfa5.svg`} alt=""/>
             </div>
             <div className='col-md-11'>
               <h2><b>{title}</b> ({release_date})</h2>
@@ -73,7 +74,7 @@ const Episodes = () => {
                             
                             <div className='col-md-6'>
                               <div className='d-flex flex-row mb-2'>
-                              <div className={`p-2 ${classes.profileImg}`}><img src={el.profile_path?`https://image.tmdb.org/t/p/w185${el.profile_path}`:`https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-4-user-grey-d8fe957375e70239d6abdd549fd7568c89281b2179b5f4470e2e12895792dfa5.svg`} /></div>
+                              <div className={`p-2 ${classes.profileImg}`}><img src={el.profile_path?`https://image.tmdb.org/t/p/w185${el.profile_path}`:`https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-4-user-grey-d8fe957375e70239d6abdd549fd7568c89281b2179b5f4470e2e12895792dfa5.svg`} alt=""/></div>
                               <div className={`p-2 ${classes.profileName}`}>
                                   <p>{el.original_name}</p>
                                   <p>{el.character}</p>
